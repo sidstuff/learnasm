@@ -46,7 +46,7 @@ The assembler can produce output in a variety of formats, with the required head
 <td>.shstrab</td><td>section header string table, holds the section names</td>
 </tr></table>
 
-Let's start writing a simple hello world program [`hello.asm`](https://github.com/sidstuff/learnasm/blob/main/hello.asm). First, `.rodata`
+Let's start writing a simple hello world program [`hello.asm`](https://github.com/sidstuff/learnasm/blob/master/hello.asm). First, `.rodata`
 ```asm
 section .rodata
 
@@ -219,7 +219,7 @@ Hello, World!
 ~$
 ```
 
-Perfect. Now let's start writing the code [`bf.asm`](https://github.com/sidstuff/learnasm/blob/main/hello.asm) for the Brainfuck interpreter `bf`. We can actually just put the welcome string in the `.text` section, but to prevent its execution, we have to specify the entry point to be after it.
+Perfect. Now let's start writing the code `bf.asm` for the Brainfuck interpreter `bf`. We can actually just put the welcome string in the `.text` section, but to prevent its execution, we have to specify the entry point to be after it.
 
 If using a custom linker script, here's how the entry point is determined, in descending order of priority:[^5]
 * the `-e' entry command-line option;
@@ -627,7 +627,7 @@ exit:
 ```
 `[rsp]` once again contains `argc` because any values pushed onto the stack during preprocessing or execution will have been popped off.
 
-And with that, we are done. The final code is [here](https://github.com/sidstuff/learnasm/blob/main/bf.asm).
+And with that, we are done. The final code is [here](https://github.com/sidstuff/learnasm/blob/master/bf.asm).
 
 Let's try it out. After assembling and linking,
 ```
