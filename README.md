@@ -156,7 +156,7 @@ Symbol table '.symtab' contains 9 entries:
 
 No version information found in this file.
 ```
-As you can see, this is a relocatable file. We need to assign everything their runtime load addresses. A linker combines multiple object files into a single executable, library, or object file. Here we only have a sungle object file, but the linker can also perform relocation. Let's use the GNU linker `ld`. The `-T` flag lets us specify a custom linker script, and `-s` strips the now unneeded symbol information from the output file (equivalent to using the `strip` command afterwards). So let's run
+As you can see, this is a relocatable file. We need to assign everything their runtime load addresses. A linker combines multiple object files into a single executable, library, or object file. Here we only have a single object file, but the linker can also perform relocation. Let's use the GNU linker `ld`. The `-T` flag lets us specify a custom linker script, and `-s` strips the now unneeded symbol information from the output file (equivalent to using the `strip` command afterwards). So let's run
 ```bash
 echo 'SECTIONS { . = 0x100e8; }' | ld -s -T /dev/stdin -o hello hello.o
 ```
