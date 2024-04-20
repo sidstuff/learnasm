@@ -46,7 +46,7 @@ The assembler can produce output in a variety of formats, with the required head
 <td>.shstrab</td><td>section header string table, holds the section names</td>
 </tr></table>
 
-Let's start writing a simple hello world program [`hello.asm`](https://github.com/sidstuff/learnasm/blob/master/hello.asm). First, `.rodata`
+Let's start writing a simple hello world program [`hello.asm`](hello.asm). First, `.rodata`
 ```asm
 section .rodata
 
@@ -627,7 +627,7 @@ exit:
 ```
 `[rsp]` once again contains `argc` because any values pushed onto the stack during preprocessing or execution will have been popped off.
 
-And with that, we are done. The final code is [here](https://github.com/sidstuff/learnasm/blob/master/bf.asm).
+And with that, we are done. The final code is [here](bf.asm).
 
 Let's try it out. After assembling and linking,
 ```
@@ -642,7 +642,7 @@ bf>
 ```
 This was a simple Brainfuck script that stores an input byte and immediately prints it, four times. `h` `e` `y` `\n`
 
-Now here's [`rot13.b`](https://github.com/sidstuff/learnasm/blob/main/rot13.b) from [brainfuck.org](https://brainfuck.org/). ROT13 is a simple letter substitution cipher that replaces a letter with the 13th letter after it in the Latin alphabet.
+Now here's [`rot13.b`](rot13.b) from [brainfuck.org](https://brainfuck.org/). ROT13 is a simple letter substitution cipher that replaces a letter with the 13th letter after it in the Latin alphabet.
 ```brainfuck
 ,[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>++++++++++++++<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>>+++++[<----->-]<<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>++++++++++++++<-[>+<-[>+<-[>+<-[>+<-[>+<-[>++++++++++++++<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>>+++++[<----->-]<<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>+<-[>++++++++++++++<-[>+<-]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]>.[-]<,]
 ```
